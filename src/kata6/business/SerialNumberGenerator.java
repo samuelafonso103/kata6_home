@@ -1,4 +1,4 @@
-package kata6.toys;
+package kata6.business;
 
 public class SerialNumberGenerator {
     private Integer serialNumber = 0;
@@ -6,7 +6,6 @@ public class SerialNumberGenerator {
     public Integer next(){
         serialNumber+=1;
         return serialNumber;
-        
     }
 
 }
