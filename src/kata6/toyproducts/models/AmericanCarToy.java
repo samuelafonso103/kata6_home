@@ -13,12 +13,12 @@ public class AmericanCarToy implements Toy{
 
     @Override
     public void pack(){
-        System.out.println("Car with serial number " + serialNumber +  " packed");
+        System.out.println("American Car with serial number " + serialNumber +  " packed");
     }
     
     @Override
     public void label(){
-        System.out.println("Car with serial number " + serialNumber +  " labeled");
+        System.out.println("American Car with serial number " + serialNumber +  " labeled");
     }
 
 }

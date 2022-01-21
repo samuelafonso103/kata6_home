@@ -1,11 +1,12 @@
-package kata6.branches;
+package kata6.factories.regionalfactories;
 
-import kata6.business.ToyBusiness;
+import kata6.factories.ToyFactory;
 import kata6.toyproducts.Toy;
 import kata6.toyproducts.models.AmericanCarToy;
 import kata6.toyproducts.models.AmericanHelicopterToy;
 
-public class AmericanToyBusiness extends ToyBusiness{
+public class AmericanToyBusiness extends ToyFactory{
+
 
     @Override
     public Toy createToy(String type) {
@@ -22,8 +23,6 @@ public class AmericanToyBusiness extends ToyBusiness{
             default:
                 return null;
         }
-        toy.pack();
-        toy.label();
         return toy;
     }
 

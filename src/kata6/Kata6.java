@@ -1,18 +1,16 @@
 package kata6;
 
 import java.util.Scanner;
-import kata6.branches.AmericanToyBusiness;
-import kata6.branches.AsianToyBusiness;
-import kata6.toyproducts.models.AsianCarToy;
-import kata6.toyproducts.models.AmericanHelicopterToy;
-import kata6.business.SerialNumberGenerator;
+import kata6.factories.regionalfactories.AmericanToyBusiness;
+import kata6.factories.regionalfactories.AsianToyBusiness;
 import kata6.business.ToyBusiness;
+import kata6.factories.ToyFactory;
 
 public class Kata6 {
 
     public static void main(String[] args) {
-        ToyBusiness toyBusiness = new AsianToyBusiness();
-                
+        ToyFactory toyFactory = new AsianToyBusiness();
+        ToyBusiness toyBusiness = new ToyBusiness(toyFactory);        
         OUTER:
         while (true) {
             System.out.println("Introduce command");
@@ -23,10 +21,10 @@ public class Kata6 {
                     System.out.println("Process finished");
                     break OUTER;
                 case "car":
-                    toyBusiness.createToy(command);
+                    toyBusiness.produceToy(command);
                     break;
                 case "helicopter":
-                    toyBusiness.createToy(command);
+                    toyBusiness.produceToy(command);
                     break;
                 default:
                     System.out.println("Command unknown!");

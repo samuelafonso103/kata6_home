@@ -12,11 +12,11 @@ public class AmericanHelicopterToy implements Toy{
     
     @Override
     public void pack(){
-        System.out.println("Helicopter with serial number " + serialNumber +  " packed");
+        System.out.println("American Helicopter with serial number " + serialNumber +  " packed");
     }
     
     @Override
     public void label(){
-        System.out.println("Helicopter with serial number " + serialNumber +  " labeled");
+        System.out.println("American Helicopter with serial number " + serialNumber +  " labeled");
     }
 }
