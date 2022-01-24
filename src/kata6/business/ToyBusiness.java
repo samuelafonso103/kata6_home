@@ -7,7 +7,7 @@ import kata6.factories.ToyFactory;
 import kata6.toyproducts.Toy;
 
 public class ToyBusiness {
-    public final SerialNumberGenerator sng = new SerialNumberGenerator();
+    public final SerialNumberGenerator sng =  SerialNumberGenerator.getInstance();
     public Map<String, ToyFactory> toyFactories = new HashMap<String, ToyFactory>();
     
     public Toy produceToy(String name){
